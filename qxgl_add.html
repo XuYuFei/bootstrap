@@ -23,6 +23,11 @@
 	<link href="./assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css"/>
 	<!-- END GLOBAL MANDATORY STYLES -->
 	
+	<!-- BEGIN PAGE LEVEL STYLES -->
+	<link rel="stylesheet" type="text/css" href="./assets/global/plugins/bootstrap-select/bootstrap-select.min.css"/>
+	<link rel="stylesheet" type="text/css" href="./assets/global/plugins/select2/select2.css"/>
+	<link rel="stylesheet" type="text/css" href="./assets/global/plugins/jquery-multi-select/css/multi-select.css"/>
+	<!-- BEGIN THEME STYLES -->
 	<!-- BEGIN THEME STYLES -->
 	<link href="./assets/global/css/components.css" id="style_components" rel="stylesheet" type="text/css"/>
 	<link href="./assets/global/css/plugins.css" rel="stylesheet" type="text/css"/>
@@ -38,298 +43,25 @@
 <!-- BEGIN BODY -->
 <body class="page-header-fixed page-quick-sidebar-over-content page-sidebar-closed-hide-logo">
 
-	<!-- BEGIN HEADER -->
-	<div class="page-header navbar navbar-fixed-top">
-		<!-- BEGIN HEADER INNER -->
-		<div class="page-header-inner">
-			<!-- BEGIN LOGO -->
-			<div class="page-logo">
-				<a href="#">
-				<img src="./assets/admin/layout/img/logo.png" alt="logo" class="logo-default"/>
-				</a>
-				<div class="menu-toggler sidebar-toggler">
-					<!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
-				</div>
-			</div>
-			<!-- END LOGO -->
-			<!-- BEGIN HEADER SEARCH BOX -->
-			<form class="search-form" action="#" method="get">
-				<div class="input-group">
-					<input type="text" class="form-control" placeholder="搜索..." name="query">
-					<span class="input-group-btn">
-					<a href="javascript:;" class="btn submit"><i class="icon-magnifier"></i></a>
-					</span>
-				</div>
-			</form>
-			<!-- END HEADER SEARCH BOX -->
-			<!-- BEGIN RESPONSIVE MENU TOGGLER -->
-			<a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"></a>
-			<!-- END RESPONSIVE MENU TOGGLER -->
-			<!-- BEGIN TOP NAVIGATION MENU -->
-			<div class="top-menu">
-				<ul class="nav navbar-nav pull-right">
-					<!-- BEGIN USER LOGIN DROPDOWN -->
-					<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-					<li class="dropdown dropdown-user">
-						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-							<img alt="" class="img-circle" src="./assets/admin/layout/img/avatar3_small.jpg"/>
-							<span class="username username-hide-on-mobile">
-							北鱼 </span>
-							<i class="fa fa-angle-down"></i>
-						</a>
-						<ul class="dropdown-menu dropdown-menu-default">
-							<li>
-								<a href="extra_profile.html">
-								<i class="icon-user"></i> 个人资料 </a>
-							</li>
-							<li>
-								<a href="page_todo.html">
-									<i class="icon-rocket"></i> 新增数据 
-									<span class="badge badge-success">7 </span>
-								</a>
-							</li>
-							<li class="divider"></li>
-							<li>
-								<a href="login.html">
-								<i class="icon-key"></i> 退出 </a>
-							</li>
-						</ul>
-					</li>
-					<!-- END USER LOGIN DROPDOWN -->
-					<!-- BEGIN QUICK SIDEBAR TOGGLER -->
-					<li class="dropdown dropdown-quick-sidebar-toggler">
-						<a href="login.html" class="dropdown-toggle">
-						<i class="icon-logout"></i>
-						</a>
-					</li>
-					<!-- END QUICK SIDEBAR TOGGLER -->
-				</ul>
-			</div>
-			<!-- END TOP NAVIGATION MENU -->
-		</div>
-		<!-- END HEADER INNER -->
-	</div>
-	<!-- END HEADER -->
-	
-	<div class="clearfix">
-	</div>
-
+	<!-- BEGIN CONTENT -->
+		<style>
+			@media (min-width: 992px) {
+			  /* 992px */
+			  /* Page content */
+			  .page-content-wrapper .page-content {
+			  	margin-left: 0;
+			  }
+			  
+				.page-sidebar-closed .page-content-wrapper .page-content {
+			    	margin-left: 0 !important;
+			  	}
+			}
+			.page-header-fixed .page-container {
+				margin-top: 0;
+			}
+		</style>
 	<!-- BEGIN CONTAINER -->
 	<div class="page-container">
-		<!-- BEGIN SIDEBAR -->
-		<div class="page-sidebar-wrapper">
-			<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
-			<!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
-			<div class="page-sidebar navbar-collapse collapse">
-				<!-- BEGIN SIDEBAR MENU -->
-				<ul class="page-sidebar-menu" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="margin-top:25px;">
-					<!-- BEGIN ANGULARJS LINK -->
-					<li class="tooltips" data-container="body" data-placement="right" data-html="true" data-original-title="首页">
-						<a href="index.html" >
-						<i class="icon-home"></i>
-						<span class="title">首页 </span>
-						</a>
-					</li>
-					<li class="start">
-						<a href="javascript:;">
-						<i class="icon-camcorder"></i>
-						<span class="title">实时监控</span>
-						<span class="arrow"></span>
-						</a>
-						<ul class="sub-menu">
-							<li>
-								<a href="dwjk.html">
-								点位监控</a>
-							</li>
-							<li>
-								<a href="sbjk.html">
-								设备监控</a>
-							</li>
-						</ul>
-					</li>
-					<li class="start">
-						<a href="javascript:;">
-						<i class="icon-bell"></i>
-						<span class="title">故障告警</span>
-						<span class="arrow"></span>
-						</a>
-						<ul class="sub-menu">
-							<li>
-								<a href="dwgj.html">
-								点位告警</a>
-							</li>
-							<li>
-								<a href="sbgj.html">
-								设备告警</a>
-							</li>
-							<li>
-								<a href="gjlxr.html">
-								告警联系人</a>
-							</li>
-							<li>
-								<a href="gjcs.html">
-								告警参数</a>
-							</li>
-						</ul>
-					</li>
-					<li class="start ">
-						<a href="javascript:;">
-						<i class="icon-screen-desktop"></i>
-						<span class="title">图像诊断</span>
-						<span class="arrow "></span>
-						</a>
-						<ul class="sub-menu">
-							<li>
-								<a href="pzxjtxzd.html">
-								配置相机图像诊断</a>
-							</li>
-							<li>
-								<a href="spzd.html">
-								视频诊断</a>
-							</li>
-							<li>
-								<a href="txzd.html">
-								图像诊断</a>
-							</li>
-						</ul>
-					</li>
-					<li class="start">
-						<a href="javascript:;">
-						<i class="icon-bar-chart"></i>
-						<span class="title">统计分析</span>
-						<span class="arrow"></span>
-						</a>
-						<ul class="sub-menu">
-							<li>
-								<a href="gzlyb.html">
-								故障率月报</a>
-							</li>
-							<li>
-								<a href="gzlnb.html">
-								故障率年报</a>
-							</li>
-							<li>
-								<a href="gzdb.html">
-								故障对比</a>
-							</li>
-							<li>
-								<a href="gzqs.html">
-								故障趋势</a>
-							</li>
-							<li>
-								<a href="gzltj.html">
-								故障率统计</a>
-							</li>
-						</ul>
-					</li>
-					<li class="start">
-						<a href="javascript:;">
-						<i class="icon-map"></i>
-						<span class="title">电子地图</span>
-						<span class="arrow"></span>
-						</a>
-						<ul class="sub-menu">
-							<li>
-								<a href="dwbz.html">
-								点位标注</a>
-							</li>
-							<li>
-								<a href="dtgl.html">
-								地图概览</a>
-							</li>
-						</ul>
-					</li>
-					<li class="start">
-						<a href="javascript:;">
-						<i class="icon-globe"></i>
-						<span class="title">资源管理</span>
-						<span class="arrow"></span>
-						</a>
-						<ul class="sub-menu">
-							<li>
-								<a href="bmgl.html">
-								部门管理</a>
-							</li>
-							<li>
-								<a href="dwgl.html">
-								点位管理</a>
-							</li>
-							<li>
-								<a href="sbgl.html">
-								设备管理</a>
-							</li>
-						</ul>
-					</li>
-					<li class="start">
-						<a href="javascript:;">
-						<i class="icon-settings"></i>
-						<span class="title">配置管理</span>
-						<span class="arrow"></span>
-						</a>
-						<ul class="sub-menu">
-							<li>
-								<a href="tycs.html">
-								通用参数</a>
-							</li>
-							<li>
-								<a href="plbf.html">
-								批量备份</a>
-							</li>
-							<li>
-								<a href="cshy.html">
-								参数还原</a>
-							</li>
-						</ul>
-					</li>
-					<li class="start active open">
-						<a href="javascript:;">
-						<i class="icon-lock"></i>
-						<span class="title">权限管理</span>
-						<span class="selected"></span>
-						<span class="arrow open"></span>
-						</a>
-						<ul class="sub-menu">
-							<li>
-								<a href="yhgl.html">
-								用户管理</a>
-							</li>
-							<li class="active">
-								<a href="qxgl.html">
-								权限管理</a>
-							</li>
-						</ul>
-					</li>
-					<li class="start ">
-						<a href="javascript:;">
-						<i class="icon-doc"></i>
-						<span class="title">日志管理</span>
-						<span class="arrow "></span>
-						</a>
-						<ul class="sub-menu">
-							<li>
-								<a href="czrz.html">
-								操作日志</a>
-							</li>
-						</ul>
-					</li>
-					<li class="start ">
-						<a href="javascript:;">
-						<i class="icon-arrow-up"></i>
-						<span class="title">固件升级</span>
-						<span class="arrow "></span>
-						</a>
-						<ul class="sub-menu">
-							<li>
-								<a href="gjsj.html">
-								固件升级</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-				<!-- END SIDEBAR MENU -->
-			</div>
-		</div>
-		<!-- END SIDEBAR -->
 		
 		<!-- BEGIN CONTENT -->
 		<div class="page-content-wrapper">
@@ -367,24 +99,62 @@
 					<div class="col-md-12">
 						<div class="portlet light bordered form-fit">
 							<div class="portlet-body form">
-								<form action="qxgl.html" id="form-username" class="form-horizontal form-bordered" >
+								<form action="jsgl.html" id="form-username" class="form-horizontal form-bordered" >
 									<div class="form-group">
 										<label class="col-md-3 control-label">
-											角色名称：
+											所属权限：
+										</label>
+										<div class="col-md-9">
+											<div class="col-md-3">
+												<div class="margin-bottom-10">
+													<select class="bs-select form-control sel-1" data-width="100%">
+														<option value="0">请选择</option>
+														<option value="1">实时监控</option>
+														<option value="2">权限管理</option>
+													</select>
+													<select class="bs-select form-control hidden">
+														<optgroup class="pid-0">
+															<option>请选择</option>
+														</optgroup>
+														<optgroup class="pid-1">
+															<option>请选择</option>
+															<option value="3">点位监控</option>
+															<option value="4">设备监控</option>
+														</optgroup>
+														<optgroup class="pid-2">
+															<option>请选择</option>
+															<option value="5">用户管理</option>
+															<option value="6">角色管理</option>
+														</optgroup>
+													</select>	
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="margin-bottom-10">
+													<select class="bs-select form-control sel-2" data-width="100%">
+														<option>请选择</option>
+													</select>	
+												</div>
+											</div>	
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-3 control-label">
+											权限名称：
 										</label>
 										<div class="col-md-9">
 											<div class="col-md-5">
-												<input type="text" name="" value="" class="form-control" placeholder="角色名称" />
+												<input type="text" name="" value="" class="form-control" placeholder="权限名称" />
 											</div>
 										</div>
 									</div>
 									<div class="form-group">
 										<label class="col-md-3 control-label">
-											角色描述：
+											权限描述：
 										</label>
 										<div class="col-md-9">
 											<div class="col-md-8">
-												<textarea class="form-control" placeholder="角色描述" rows="3" ></textarea>
+												<textarea class="form-control" placeholder="权限描述" rows="3" ></textarea>
 											</div>
 										</div>
 									</div>
@@ -409,16 +179,6 @@
 	</div>
 	<!-- END CONTAINER -->
 
-	<!-- BEGIN FOOTER -->
-	<div class="page-footer">
-		<div class="page-footer-inner">
-			 智能运维管理平台
-		</div>
-		<div class="scroll-to-top">
-			<i class="icon-arrow-up"></i>
-		</div>
-	</div>
-	<!-- END FOOTER -->
 
 
 	<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
@@ -439,17 +199,30 @@
 	<script src="./assets/global/plugins/jquery.cokie.min.js" type="text/javascript"></script>
 	<script src="./assets/global/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
 	<script src="./assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
-	<!-- END CORE PLUGINS -->
+	
+	<!-- BEGIN PAGE LEVEL PLUGINS -->
+	<script type="text/javascript" src="./assets/global/plugins/bootstrap-select/bootstrap-select.min.js"></script>
+	<script type="text/javascript" src="./assets/global/plugins/select2/select2.min.js"></script>
+	<script type="text/javascript" src="./assets/global/plugins/jquery-multi-select/js/jquery.multi-select.js"></script>
+	<!-- END PAGE LEVEL PLUGINS -->
 	<!-- BEGIN PAGE LEVEL SCRIPTS -->
 	<script src="./assets/global/scripts/metronic.js" type="text/javascript"></script>
 	<script src="./assets/admin/layout/scripts/layout.js" type="text/javascript"></script>
 	<script src="./assets/admin/pages/scripts/index.js" type="text/javascript"></script>
+	<script src="./assets/admin/pages/scripts/components-dropdowns.js"></script>
 	<!-- END PAGE LEVEL SCRIPTS -->
 	
 	
 	<script>
 		jQuery(document).ready(function() {    
+		   	Metronic.init(); // init metronic core components
 			Layout.init(); // init current layout
+			
+			$(".sel-1").change(function(){
+				var pid = $(this).val();
+				var html = $(".pid-" + pid).html();
+				$(".sel-2").html(html);
+			});
 		});
 	</script>
 	<!-- END JAVASCRIPTS -->

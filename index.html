@@ -7,7 +7,7 @@
 <!-- BEGIN HEAD -->
 <head>
 	<meta charset="utf-8"/>
-	<title>Metronic | Page Layouts - Search Box On Header 1</title>
+	<title>后台</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
@@ -163,6 +163,10 @@
 								用户管理</a>
 							</li>
 							<li>
+								<a href="jsgl.html" target="mainFrame" class="main-frame" >
+								角色管理</a>
+							</li>
+							<li>
 								<a href="qxgl.html" target="mainFrame" class="main-frame" >
 								权限管理</a>
 							</li>
@@ -242,8 +246,6 @@
 	jQuery(document).ready(function() {    
 	   	Metronic.init(); // init metronic core components
 		Layout.init(); // init current layout
-		QuickSidebar.init(); // init quick sidebar
-		Demo.init(); // init demo features
 		
 		// handle button click within sidebar menu
         $('.page-sidebar').on('click', ' li > a.main-frame', function (e) {
@@ -262,9 +264,6 @@
             });
             $(this).parents('li').addClass('active');
 
-            if (Metronic.getViewPort().width < resBreakpointMd && $('.page-sidebar').hasClass("in")) { // close the menu on mobile view while laoding a page 
-                $('.page-header .responsive-toggler').click();
-            }
         });
 	});
 	</script>

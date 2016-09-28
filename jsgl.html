@@ -57,23 +57,23 @@
 		</style>
 	<!-- BEGIN CONTAINER -->
 	<div class="page-container">
-		
 		<!-- BEGIN CONTENT -->
 		<div class="page-content-wrapper">
 			<div class="page-content">
+				
 				<!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
-				<div class="modal fade" id="portlet-config" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal fade" id="role-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 					<div class="modal-dialog">
 						<div class="modal-content">
 							<div class="modal-header">
 								<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-								<h4 class="modal-title">标题</h4>
+								<h4 class="modal-title">提示</h4>
 							</div>
 							<div class="modal-body">
-								 操作
+								确定要删除吗？
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="btn blue">确定</button>
+								<button type="button" class="btn blue confirm-delete" data-id="">确定</button>
 								<button type="button" class="btn default" data-dismiss="modal">关闭</button>
 							</div>
 						</div>
@@ -86,7 +86,7 @@
 				
 				<!-- BEGIN PAGE HEADER-->
 				<h3 class="page-title">
-				点位监控 <small>点位监控用于监控所有点位的状态</small>
+				角色管理 <small>描述</small>
 				</h3>
 				<div class="page-bar">
 					<ul class="page-breadcrumb">
@@ -96,136 +96,67 @@
 							<i class="fa fa-angle-right"></i>
 						</li>
 						<li>
-							<a href="#">实时监控</a>
+							<a href="#">权限管理</a>
 							<i class="fa fa-angle-right"></i>
 						</li>
 						<li>
-							<a href="#">点位监控</a>
+							<a href="#">角色管理</a>
 						</li>
 					</ul>
+					<div class="pull-right">
+						<a href="jsgl_add.html" class="btn btn green" ><i class="fa fa-plus"></i>添加</a>
+					</div>
 				</div>
 				<!-- END PAGE HEADER-->
 				<!-- BEGIN PAGE CONTENT-->
 				<div class="row">
 					<div class="col-md-12">
-					
-						<!-- BEGIN SAMPLE TABLE PORTLET-->
-							<div class="portlet-title">
-								<div class="tools">
-									<a href="javascript:;" class="collapse">
-									</a>
-									<a href="#portlet-config" data-toggle="modal" class="config">
-									</a>
-									<a href="javascript:;" class="reload">
-									</a>
-									<a href="javascript:;" class="remove">
-									</a>
-								</div>
-							</div>
-							<div class="portlet-body">
-								<div class="table-scrollable">
-									<table class="table table-striped table-bordered table-hover">
-									<thead>
-									<tr>
-										<th scope="col">部门</th>
-										<th scope="col">点位</th>
-										<th scope="col">设备名称</th>
-										<th scope="col">控制器IP</th>
-										<th scope="col">总闸</th>
-										<th scope="col">供电</th>
-										<th scope="col">网络</th>
-										<th scope="col">GPRS</th>
-										<th scope="col">柜门状态</th>
-										<th scope="col">机箱温度</th>
-										<th scope="col">远程维护</th>
-										<th scope="col">图形监控</th>
-										<th scope="col">历史故障</th>
-									</tr>
-									</thead>
-									<tbody>
-									<tr>
-										<td>兰山区</td>
-										<td>通达路12号</td>
-										<td>控制器111</td>
-										<td>192.168.200.111</td>
-										<td>正常</td>
-										<td>正常</td>
-										<td>正常</td>
-										<td>正常</td>
-										<td>正常</td>
-										<td>25°</td>
-										<td>重启</td>
-										<td>监控</td>
-										<td>历史故障</td>
-									</tr>
-									<tr>
-										<td>兰山区</td>
-										<td>通达路12号</td>
-										<td>控制器111</td>
-										<td>192.168.200.111</td>
-										<td>正常</td>
-										<td>正常</td>
-										<td>正常</td>
-										<td>正常</td>
-										<td>正常</td>
-										<td>25°</td>
-										<td>重启</td>
-										<td>监控</td>
-										<td>历史故障</td>
-									</tr>
-									<tr>
-										<td>兰山区</td>
-										<td>通达路12号</td>
-										<td>控制器111</td>
-										<td>192.168.200.111</td>
-										<td>正常</td>
-										<td>正常</td>
-										<td>正常</td>
-										<td>正常</td>
-										<td>正常</td>
-										<td>25°</td>
-										<td>重启</td>
-										<td>监控</td>
-										<td>历史故障</td>
-									</tr>
-									<tr>
-										<td>兰山区</td>
-										<td>通达路12号</td>
-										<td>控制器111</td>
-										<td>192.168.200.111</td>
-										<td>正常</td>
-										<td>正常</td>
-										<td>正常</td>
-										<td>正常</td>
-										<td>正常</td>
-										<td>25°</td>
-										<td>重启</td>
-										<td>监控</td>
-										<td>历史故障</td>
-									</tr>
-									</tbody>
-									</table>
-								</div>
-							</div>
-							<nav class="pull-right">
-								<ul class="pagination">
-									<li class="disabled"><a href="#"><i class="fa fa-angle-left"></i></a></li>
-								    <li class="active"><a href="#">1</a></li>
-								    <li><a href="#">2</a></li>
-								    <li><a href="#">3</a></li>
-								    <li><a href="#">4</a></li>
-								    <li><a href="#">5</a></li>
-								    <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-							  	</ul>
-							</nav>
-						<!-- END SAMPLE TABLE PORTLET-->
+						<div class="table-scrollable">
+							<table class="table table-bordered table-hover">
+							<thead>
+							<tr>
+								<th scope="col">角色名称</th>
+								<th scope="col">角色描述</th>
+								<th scope="col">操作</th>
+							</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>系统管理员</td>
+									<td>系统操作员</td>
+									<td>
+										<a href="jsgl_add.html" class="btn btn-xs blue" ><i class="fa fa-edit"></i>编辑</a>
+										<a href="jsgl_auth.html" class="btn btn-xs blue" ><i class="fa fa-gear"></i>设置权限</a>
+										<a href="#role-delete"  data-toggle="modal" class="btn btn-xs red role-delete" data-id="1" ><i class="fa fa-times"></i>删除</a>
+									</td>
+								</tr>
+								<tr>
+								<td>系统管理员</td>
+								<td>系统操作员</td>
+								<td>
+									<a href="jsgl_add.html" class="btn btn-xs blue" ><i class="fa fa-edit"></i>编辑</a>
+									<a href="jsgl_auth.html" class="btn btn-xs blue" ><i class="fa fa-gear"></i>设置权限</a>
+									<a href="#role-delete"  data-toggle="modal" class="btn btn-xs red role-delete" data-id="2" ><i class="fa fa-times"></i>删除</a>
+								</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+						<nav class="pull-right">
+							<ul class="pagination">
+								<li class="disabled"><a href="#"><i class="fa fa-angle-left"></i></a></li>
+							    <li class="active"><a href="#">1</a></li>
+							    <li><a href="#">2</a></li>
+							    <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+						  	</ul>
+						</nav>
 					</div>
 				</div>
 				<!-- END PAGE CONTENT-->
+				
 			</div>
 		</div>
 		<!-- END CONTENT -->
-	
 	</div>
 	<!-- END CONTAINER -->
 
@@ -261,6 +192,17 @@
 		jQuery(document).ready(function() {    
 		   	Metronic.init(); // init metronic core components
 			Layout.init(); // init current layout
+			
+			//角色删除
+			$(".role-delete").click(function(){
+				var id = $(this).attr("data-id");
+				$(".confirm-delete").attr("data-id", id);
+			});
+			$(".confirm-delete").click(function(){
+				var id = $(this).attr("data-id");
+				alert(id)
+				$('#role-delete').modal('hide')
+			});
 		});
 	</script>
 	<!-- END JAVASCRIPTS -->
